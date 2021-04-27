@@ -11,6 +11,13 @@ See [docs](https://iterable-iterator.github.io/range/index.html).
 > `regeneratorRuntime` to be defined, for instance by importing
 > [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
 
+```js
+import {range} from '@iterable-iterator/range';
+range( 3 ) ; // 0 1 2
+range( 2 , 5 ) ; // 2 3 4
+range( 5 , 2 , -1 ) ; // 5 4 3
+```
+
 [![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)
 [![Tests](https://img.shields.io/github/workflow/status/iterable-iterator/range/ci:test?event=push&label=tests)](https://github.com/iterable-iterator/range/actions/workflows/ci:test.yml?query=branch:main)
