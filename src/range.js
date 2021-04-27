@@ -7,10 +7,10 @@ import _range from './_range.js';
  * step value are optional. By default the starting value is <code>0</code>.
  * The default for the step value is <code>1</code>.
  *
- * @param {Number} [start=0] - The starting value.
- * @param {Number} stop - The stopping value.
- * @param {Number} [step=1] - The step value.
- * @returns {IterableIterator}
+ * @param {number} [start=0] - The starting value.
+ * @param {number} stop - The stopping value.
+ * @param {number} [step=1] - The step value.
+ * @returns {IterableIterator<number>}
  */
 export default function range(start, stop, step) {
 	if (stop === undefined) {
