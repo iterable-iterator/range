@@ -1,4 +1,5 @@
-import _range from './_range.js';
+import ForwardRange from './ForwardRange.js';
+import BackwardRange from './BackwardRange.js';
 
 /**
  * Yields values in a range, separated by a fixed constant called step. If this
@@ -10,16 +11,20 @@ import _range from './_range.js';
  * @param {number} [start=0] - The starting value.
  * @param {number} stop - The stopping value.
  * @param {number} [step=1] - The step value.
- * @returns {IterableIterator<number>}
+ * @returns {ForwardRange|BackwardRange}
  */
-export default function range(start, stop, step) {
+const range = (start, stop, step) => {
 	if (stop === undefined) {
-		return _range(0, start, 1);
+		return new ForwardRange(0, start, 1);
 	}
 
 	if (step === undefined) {
-		return _range(start, stop, 1);
+		return new ForwardRange(start, stop, 1);
 	}
 
-	return _range(start, stop, step);
-}
+	return step < 0
+		? new BackwardRange(start, stop, step)
+		: new ForwardRange(start, stop, step);
+};
+
+export default range;

@@ -2,12 +2,13 @@ import test from 'ava';
 
 import {range} from '../../src/index.js';
 
-const macro = (t, begin, end, step, expected) => {
-	t.deepEqual(Array.from(range(begin, end, step)), expected);
+const macro = (t, start, stop, step, expected) => {
+	t.deepEqual(Array.from(range(start, stop, step)), expected);
 };
 
-macro.title = (title, begin, end, step, _expected) =>
-	title ?? `range(${begin}, ${end}, ${step})`;
+macro.title = (title, start, stop, step, expected) =>
+	title ??
+	`list(range(${start}, ${stop}, ${step})) = ${JSON.stringify(expected)}`;
 
 test(macro, 3, undefined, undefined, [0, 1, 2]);
 test(macro, 3, 6, undefined, [3, 4, 5]);
