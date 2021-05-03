@@ -17,6 +17,11 @@ const doesnothave = (t, items, x) => {
 doesnothave.title = (title, items, x) =>
 	title ?? `${items}.has(${repr(x)}) is false`;
 
+test(has, range(0, 1, 2), 0);
+test(doesnothave, range(0, 1, 2), 1);
+test(doesnothave, range(0, 1, 2), 2);
+test(doesnothave, range(0, 1, 2), -1);
+
 test(has, range(10), 7);
 test(doesnothave, range(0, 10, 2), 7);
 test(doesnothave, range(0, 9, 2), 7);

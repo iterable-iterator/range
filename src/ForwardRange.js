@@ -13,7 +13,12 @@ export default class ForwardRange extends Range {
 	constructor(start, stop, step) {
 		assert(step !== 0);
 		assert(step > 0);
-		super(start, stop, step);
+		super(
+			start,
+			stop,
+			step,
+			start >= stop ? 0 : 1 + Math.floor((stop - start - 1) / step),
+		);
 	}
 
 	/**

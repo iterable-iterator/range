@@ -7,15 +7,17 @@ export default class Range {
 	 * @param {number} start
 	 * @param {number} stop
 	 * @param {number} step
+	 * @param {number} length
 	 */
-	constructor(start, stop, step) {
+	constructor(start, stop, step, length) {
 		assert(Number.isInteger(start));
 		assert(Number.isInteger(stop));
 		assert(Number.isInteger(step));
+		assert(Number.isInteger(length));
 		this.start = start;
 		this.stop = stop;
 		this.step = step;
-		this.length = Math.max(0, Math.floor((stop - start) / step));
+		this.length = length;
 	}
 
 	/**

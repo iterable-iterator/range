@@ -30,3 +30,6 @@ test(throws, range(10), 10123701);
 
 test(throws, range(-12890981238, 81979238179), null);
 test(throws, range(-12890981238, 81979238179), 0.5);
+
+test(get, range(0, 1, 2), 0, 0);
+test(throws, range(0, 1, 2), 1);
