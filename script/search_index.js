@@ -1,8 +1,32 @@
 window.esdocSearchIndex = [
   [
-    "@iterable-iterator/range/src/_range.js~_range",
-    "function/index.html#static-function-_range",
-    "<span>_range</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/_range.js</span>",
+    "@iterable-iterator/range/src/forwardrange.js~forwardrange",
+    "class/src/ForwardRange.js~ForwardRange.html",
+    "<span>ForwardRange</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/ForwardRange.js</span>",
+    "class"
+  ],
+  [
+    "@iterable-iterator/range/src/range.js~range",
+    "class/src/Range.js~Range.html",
+    "<span>Range</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/Range.js</span>",
+    "class"
+  ],
+  [
+    "@iterable-iterator/range/src/backwardrange.js~reverserange",
+    "class/src/BackwardRange.js~ReverseRange.html",
+    "<span>ReverseRange</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/BackwardRange.js</span>",
+    "class"
+  ],
+  [
+    "@iterable-iterator/range/src/backwardrangeiterator.js~backwardrangeiterator",
+    "function/index.html#static-function-backwardRangeIterator",
+    "<span>backwardRangeIterator</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/backwardRangeIterator.js</span>",
+    "function"
+  ],
+  [
+    "@iterable-iterator/range/src/forwardrangeiterator.js~forwardrangeiterator",
+    "function/index.html#static-function-forwardRangeIterator",
+    "<span>forwardRangeIterator</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/forwardRangeIterator.js</span>",
     "function"
   ],
   [
@@ -294,9 +318,111 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/_range.js",
-    "file/src/_range.js.html",
-    "src/_range.js",
+    "src/backwardrange.js",
+    "file/src/BackwardRange.js.html",
+    "src/BackwardRange.js",
+    "file"
+  ],
+  [
+    "src/backwardrange.js~reverserange#[symbol.iterator]",
+    "class/src/BackwardRange.js~ReverseRange.html#instance-method-[Symbol.iterator]",
+    "src/BackwardRange.js~ReverseRange#[Symbol.iterator]",
+    "method"
+  ],
+  [
+    "src/backwardrange.js~reverserange#constructor",
+    "class/src/BackwardRange.js~ReverseRange.html#instance-constructor-constructor",
+    "src/BackwardRange.js~ReverseRange#constructor",
+    "method"
+  ],
+  [
+    "src/backwardrange.js~reverserange#has",
+    "class/src/BackwardRange.js~ReverseRange.html#instance-method-has",
+    "src/BackwardRange.js~ReverseRange#has",
+    "method"
+  ],
+  [
+    "src/forwardrange.js",
+    "file/src/ForwardRange.js.html",
+    "src/ForwardRange.js",
+    "file"
+  ],
+  [
+    "src/forwardrange.js~forwardrange#[symbol.iterator]",
+    "class/src/ForwardRange.js~ForwardRange.html#instance-method-[Symbol.iterator]",
+    "src/ForwardRange.js~ForwardRange#[Symbol.iterator]",
+    "method"
+  ],
+  [
+    "src/forwardrange.js~forwardrange#constructor",
+    "class/src/ForwardRange.js~ForwardRange.html#instance-constructor-constructor",
+    "src/ForwardRange.js~ForwardRange#constructor",
+    "method"
+  ],
+  [
+    "src/forwardrange.js~forwardrange#has",
+    "class/src/ForwardRange.js~ForwardRange.html#instance-method-has",
+    "src/ForwardRange.js~ForwardRange#has",
+    "method"
+  ],
+  [
+    "src/range.js",
+    "file/src/Range.js.html",
+    "src/Range.js",
+    "file"
+  ],
+  [
+    "src/range.js~range#constructor",
+    "class/src/Range.js~Range.html#instance-constructor-constructor",
+    "src/Range.js~Range#constructor",
+    "method"
+  ],
+  [
+    "src/range.js~range#get",
+    "class/src/Range.js~Range.html#instance-method-get",
+    "src/Range.js~Range#get",
+    "method"
+  ],
+  [
+    "src/range.js~range#length",
+    "class/src/Range.js~Range.html#instance-member-length",
+    "src/Range.js~Range#length",
+    "member"
+  ],
+  [
+    "src/range.js~range#start",
+    "class/src/Range.js~Range.html#instance-member-start",
+    "src/Range.js~Range#start",
+    "member"
+  ],
+  [
+    "src/range.js~range#step",
+    "class/src/Range.js~Range.html#instance-member-step",
+    "src/Range.js~Range#step",
+    "member"
+  ],
+  [
+    "src/range.js~range#stop",
+    "class/src/Range.js~Range.html#instance-member-stop",
+    "src/Range.js~Range#stop",
+    "member"
+  ],
+  [
+    "src/range.js~range#tostring",
+    "class/src/Range.js~Range.html#instance-method-toString",
+    "src/Range.js~Range#toString",
+    "method"
+  ],
+  [
+    "src/backwardrangeiterator.js",
+    "file/src/backwardRangeIterator.js.html",
+    "src/backwardRangeIterator.js",
+    "file"
+  ],
+  [
+    "src/forwardrangeiterator.js",
+    "file/src/forwardRangeIterator.js.html",
+    "src/forwardRangeIterator.js",
     "file"
   ],
   [

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @iterable-iterator/range</title>
+  <title data-ice="title">src/Range.js | @iterable-iterator/range</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -39,13 +39,49 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export {default as BackwardRange} from &apos;./BackwardRange.js&apos;;
-export {default as ForwardRange} from &apos;./ForwardRange.js&apos;;
-export {default as Range} from &apos;./Range.js&apos;;
-export {default as backwardRangeIterator} from &apos;./backwardRangeIterator.js&apos;;
-export {default as forwardRangeIterator} from &apos;./forwardRangeIterator.js&apos;;
-export {default as range} from &apos;./range.js&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">src/Range.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+
+export default class Range {
+	/**
+	 * Constructor.
+	 *
+	 * @param {number} start
+	 * @param {number} stop
+	 * @param {number} step
+	 * @param {number} length
+	 */
+	constructor(start, stop, step, length) {
+		assert(Number.isInteger(start));
+		assert(Number.isInteger(stop));
+		assert(Number.isInteger(step));
+		assert(Number.isInteger(length));
+		this.start = start;
+		this.stop = stop;
+		this.step = step;
+		this.length = length;
+	}
+
+	/**
+	 * @returns {string}
+	 */
+	toString() {
+		return `range(${this.start}, ${this.stop}, ${this.step})`;
+	}
+
+	/**
+	 * Get.
+	 *
+	 * @param {number} i
+	 * @returns {number}
+	 */
+	get(i) {
+		if (!Number.isInteger(i)) throw new Error(&apos;IndexError&apos;);
+		if (i &lt; 0) throw new Error(&apos;IndexError&apos;);
+		if (i &gt;= this.length) throw new Error(&apos;IndexError&apos;);
+		return this.start + i * this.step;
+	}
+}
 </code></pre>
 
 </div>

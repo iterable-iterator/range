@@ -1,9 +1,39 @@
 {
-  "coverage": "100%",
-  "expectCount": 2,
-  "actualCount": 2,
+  "coverage": "63.15%",
+  "expectCount": 19,
+  "actualCount": 12,
   "files": {
-    "src/_range.js": {
+    "src/BackwardRange.js": {
+      "expectCount": 4,
+      "actualCount": 3,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/ForwardRange.js": {
+      "expectCount": 4,
+      "actualCount": 3,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/Range.js": {
+      "expectCount": 8,
+      "actualCount": 3,
+      "undocumentLines": [
+        3,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "src/backwardRangeIterator.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/forwardRangeIterator.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

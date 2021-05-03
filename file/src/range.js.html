@@ -29,14 +29,19 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_range">_range</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BackwardRange.js~ReverseRange.html">ReverseRange</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ForwardRange.js~ForwardRange.html">ForwardRange</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Range.js~Range.html">Range</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-backwardRangeIterator">backwardRangeIterator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-forwardRangeIterator">forwardRangeIterator</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-range">range</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/range.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import _range from &apos;./_range.js&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import ForwardRange from &apos;./ForwardRange.js&apos;;
+import BackwardRange from &apos;./BackwardRange.js&apos;;
 
 /**
  * Yields values in a range, separated by a fixed constant called step. If this
@@ -48,19 +53,23 @@
  * @param {number} [start=0] - The starting value.
  * @param {number} stop - The stopping value.
  * @param {number} [step=1] - The step value.
- * @returns {IterableIterator&lt;number&gt;}
+ * @returns {ForwardRange|BackwardRange}
  */
-export default function range(start, stop, step) {
+const range = (start, stop, step) =&gt; {
 	if (stop === undefined) {
-		return _range(0, start, 1);
+		return new ForwardRange(0, start, 1);
 	}
 
 	if (step === undefined) {
-		return _range(start, stop, 1);
+		return new ForwardRange(start, stop, 1);
 	}
 
-	return _range(start, stop, step);
-}
+	return step &lt; 0
+		? new BackwardRange(start, stop, step)
+		: new ForwardRange(start, stop, step);
+};
+
+export default range;
 </code></pre>
 
 </div>
