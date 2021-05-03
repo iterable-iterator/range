@@ -13,6 +13,21 @@ import {range} from '@iterable-iterator/range';
 range( 3 ) ; // 0 1 2
 range( 2 , 5 ) ; // 2 3 4
 range( 5 , 2 , -1 ) ; // 5 4 3
+
+range(Number.MAX_SAFE_INTEGER).has(1234); // true
+range(0, 10, 2).get(3); // 6
+
+// If you only use the iterator feature you can save bytes by calling the
+// IterableIterator function directly
+import {forwardRangeIterator, backwardRangeIterator} from '@iterable-iterator/range';
+
+for (const x of forwardRangeIterator(0, 10, 1)) ...
+for (const x of backwardRangeIterator(10, 0, -1)) ...
+// caveat: This requires you to specify all parameters, and choose the correct
+// implementation depending on the sign of the `step` parameter.
+
+// For convenience
+import {forwardRangeIterator as range} from '@iterable-iterator/range';
 ```
 
 [![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)
