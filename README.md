@@ -27,8 +27,8 @@ for (const x of backwardRangeIterator(10, 0, -1)) ...
 // implementation depending on the sign of the `step` parameter.
 
 // For convenience, rangeIterator will return the correct kind of
-IterableIterator without constructing a Range object. It has the same signature
-as the range function.
+// IterableIterator without constructing a Range object. It has the same signature
+// as the range function.
 import {rangeIterator as range} from '@iterable-iterator/range';
 ```
 
