@@ -26,8 +26,10 @@ for (const x of backwardRangeIterator(10, 0, -1)) ...
 // caveat: This requires you to specify all parameters, and choose the correct
 // implementation depending on the sign of the `step` parameter.
 
-// For convenience
-import {forwardRangeIterator as range} from '@iterable-iterator/range';
+// For convenience, rangeIterator will return the correct kind of
+IterableIterator without constructing a Range object. It has the same signature
+as the range function.
+import {rangeIterator as range} from '@iterable-iterator/range';
 ```
 
 [![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)
