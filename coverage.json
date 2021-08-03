@@ -1,7 +1,7 @@
 {
-  "coverage": "63.15%",
-  "expectCount": 19,
-  "actualCount": 12,
+  "coverage": "66.66%",
+  "expectCount": 21,
+  "actualCount": 14,
   "files": {
     "src/BackwardRange.js": {
       "expectCount": 4,
@@ -39,6 +39,16 @@
       "undocumentLines": []
     },
     "src/range.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/rangeArgs.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/rangeIterator.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

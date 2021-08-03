@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/BackwardRange.js",
-    "content": "import assert from 'assert';\nimport Range from './Range.js';\nimport backwardRangeIterator from './backwardRangeIterator.js';\n\nexport default class ReverseRange extends Range {\n\t/**\n\t * Constructor.\n\t *\n\t * @param {number} start\n\t * @param {number} stop\n\t * @param {number} step\n\t */\n\tconstructor(start, stop, step) {\n\t\tassert(step !== 0);\n\t\tassert(step < 0);\n\t\tsuper(\n\t\t\tstart,\n\t\t\tstop,\n\t\t\tstep,\n\t\t\tstart <= stop ? 0 : 1 + Math.floor((stop - start + 1) / step),\n\t\t);\n\t}\n\n\t/**\n\t * @returns {IterableIterator<number>}\n\t */\n\t[Symbol.iterator]() {\n\t\treturn backwardRangeIterator(this.start, this.stop, this.step);\n\t}\n\n\t/**\n\t * Has.\n\t *\n\t * @param {number} x\n\t * @returns {boolean}\n\t */\n\thas(x) {\n\t\tif (!Number.isInteger(x)) return false;\n\t\tif (x <= this.stop) return false;\n\t\tif (x > this.start) return false;\n\t\treturn (this.start - x) % this.step === 0;\n\t}\n}\n",
+    "content": "import assert from 'assert';\nimport Range from './Range.js';\nimport backwardRangeIterator from './backwardRangeIterator.js';\n\nexport default class BackwardRange extends Range {\n\t/**\n\t * Constructor.\n\t *\n\t * @param {number} start\n\t * @param {number} stop\n\t * @param {number} step\n\t */\n\tconstructor(start, stop, step) {\n\t\tassert(step !== 0);\n\t\tassert(step < 0);\n\t\tsuper(\n\t\t\tstart,\n\t\t\tstop,\n\t\t\tstep,\n\t\t\tstart <= stop ? 0 : 1 + Math.floor((stop - start + 1) / step),\n\t\t);\n\t}\n\n\t/**\n\t * @returns {IterableIterator<number>}\n\t */\n\t[Symbol.iterator]() {\n\t\treturn backwardRangeIterator(this.start, this.stop, this.step);\n\t}\n\n\t/**\n\t * Has.\n\t *\n\t * @param {number} x\n\t * @returns {boolean}\n\t */\n\thas(x) {\n\t\tif (!Number.isInteger(x)) return false;\n\t\tif (x <= this.stop) return false;\n\t\tif (x > this.start) return false;\n\t\treturn (this.start - x) % this.step === 0;\n\t}\n}\n",
     "static": true,
     "longname": "/home/runner/work/range/range/src/BackwardRange.js",
     "access": "public",
@@ -577,14 +577,14 @@
   {
     "__docId__": 49,
     "kind": "class",
-    "name": "ReverseRange",
+    "name": "BackwardRange",
     "memberof": "src/BackwardRange.js",
     "static": true,
-    "longname": "src/BackwardRange.js~ReverseRange",
+    "longname": "src/BackwardRange.js~BackwardRange",
     "access": "public",
     "export": true,
     "importPath": "@iterable-iterator/range/src/BackwardRange.js",
-    "importStyle": "ReverseRange",
+    "importStyle": "BackwardRange",
     "description": null,
     "lineNumber": 5,
     "undocument": true,
@@ -597,11 +597,11 @@
     "__docId__": 50,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "src/BackwardRange.js~ReverseRange",
+    "memberof": "src/BackwardRange.js~BackwardRange",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/BackwardRange.js~ReverseRange#constructor",
+    "longname": "src/BackwardRange.js~BackwardRange#constructor",
     "access": "public",
     "description": "Constructor.",
     "lineNumber": 13,
@@ -642,11 +642,11 @@
     "__docId__": 51,
     "kind": "method",
     "name": "[Symbol.iterator]",
-    "memberof": "src/BackwardRange.js~ReverseRange",
+    "memberof": "src/BackwardRange.js~BackwardRange",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/BackwardRange.js~ReverseRange#[Symbol.iterator]",
+    "longname": "src/BackwardRange.js~BackwardRange#[Symbol.iterator]",
     "access": "public",
     "description": "",
     "lineNumber": 27,
@@ -670,11 +670,11 @@
     "__docId__": 52,
     "kind": "method",
     "name": "has",
-    "memberof": "src/BackwardRange.js~ReverseRange",
+    "memberof": "src/BackwardRange.js~BackwardRange",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/BackwardRange.js~ReverseRange#has",
+    "longname": "src/BackwardRange.js~BackwardRange#has",
     "access": "public",
     "description": "Has.",
     "lineNumber": 37,
@@ -1214,7 +1214,7 @@
     "__docId__": 71,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export {default as BackwardRange} from './BackwardRange.js';\nexport {default as ForwardRange} from './ForwardRange.js';\nexport {default as Range} from './Range.js';\nexport {default as backwardRangeIterator} from './backwardRangeIterator.js';\nexport {default as forwardRangeIterator} from './forwardRangeIterator.js';\nexport {default as range} from './range.js';\n",
+    "content": "export {default as BackwardRange} from './BackwardRange.js';\nexport {default as ForwardRange} from './ForwardRange.js';\nexport {default as Range} from './Range.js';\nexport {default as backwardRangeIterator} from './backwardRangeIterator.js';\nexport {default as forwardRangeIterator} from './forwardRangeIterator.js';\nexport {default as range} from './range.js';\nexport {default as rangeArgs} from './rangeArgs.js';\nexport {default as rangeIterator} from './rangeIterator.js';\n",
     "static": true,
     "longname": "/home/runner/work/range/range/src/index.js",
     "access": "public",
@@ -1225,7 +1225,7 @@
     "__docId__": 72,
     "kind": "file",
     "name": "src/range.js",
-    "content": "import ForwardRange from './ForwardRange.js';\nimport BackwardRange from './BackwardRange.js';\n\n/**\n * Yields values in a range, separated by a fixed constant called step. If this\n * step is negative, the range has to be given in reverse order, that is,\n * largest value first, smallest value second. Both the starting value and the\n * step value are optional. By default the starting value is <code>0</code>.\n * The default for the step value is <code>1</code>.\n *\n * @param {number} [start=0] - The starting value.\n * @param {number} stop - The stopping value.\n * @param {number} [step=1] - The step value.\n * @returns {ForwardRange|BackwardRange}\n */\nconst range = (start, stop, step) => {\n\tif (stop === undefined) {\n\t\treturn new ForwardRange(0, start, 1);\n\t}\n\n\tif (step === undefined) {\n\t\treturn new ForwardRange(start, stop, 1);\n\t}\n\n\treturn step < 0\n\t\t? new BackwardRange(start, stop, step)\n\t\t: new ForwardRange(start, stop, step);\n};\n\nexport default range;\n",
+    "content": "import rangeArgs from './rangeArgs.js';\nimport ForwardRange from './ForwardRange.js';\nimport BackwardRange from './BackwardRange.js';\n\n/**\n * Constructs a {@link Range} whose iterator yields values in an interval,\n * separated by a fixed constant called step. If this step is negative, the\n * range has to be given in reverse order, that is, largest value first,\n * smallest value second. Both the starting value and the step value are\n * optional. By default the starting value is <code>0</code>. The default for\n * the step value is <code>1</code>.\n *\n * @param {number} [start=0] - The starting value.\n * @param {number} stop - The stopping value.\n * @param {number} [step=1] - The step value.\n * @returns {ForwardRange|BackwardRange}\n */\nconst range = (start, stop, step) => {\n\t[start, stop, step] = rangeArgs(start, stop, step);\n\treturn step < 0\n\t\t? new BackwardRange(start, stop, step)\n\t\t: new ForwardRange(start, stop, step);\n};\n\nexport default range;\n",
     "static": true,
     "longname": "/home/runner/work/range/range/src/range.js",
     "access": "public",
@@ -1245,8 +1245,8 @@
     "export": true,
     "importPath": "@iterable-iterator/range/src/range.js",
     "importStyle": "range",
-    "description": "Yields values in a range, separated by a fixed constant called step. If this\nstep is negative, the range has to be given in reverse order, that is,\nlargest value first, smallest value second. Both the starting value and the\nstep value are optional. By default the starting value is <code>0</code>.\nThe default for the step value is <code>1</code>.",
-    "lineNumber": 16,
+    "description": "Constructs a {@link Range} whose iterator yields values in an interval,\nseparated by a fixed constant called step. If this step is negative, the\nrange has to be given in reverse order, that is, largest value first,\nsmallest value second. Both the starting value and the step value are\noptional. By default the starting value is <code>0</code>. The default for\nthe step value is <code>1</code>.",
+    "lineNumber": 18,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1300,8 +1300,162 @@
     }
   },
   {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/rangeArgs.js",
+    "content": "/**\n * Resolve arguments for {@link range} and {@link rangeIterator}.\n *\n * @param {number} [start=0] - The starting value.\n * @param {number} stop - The stopping value.\n * @param {number} [step=1] - The step value.\n * @returns {[number, number, number]}\n */\nconst rangeArgs = (start, stop, step) => {\n\tif (stop === undefined) {\n\t\treturn [0, start, 1];\n\t}\n\n\tif (step === undefined) {\n\t\treturn [start, stop, 1];\n\t}\n\n\treturn [start, stop, step];\n};\n\nexport default rangeArgs;\n",
+    "static": true,
+    "longname": "/home/runner/work/range/range/src/rangeArgs.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "rangeArgs",
+    "memberof": "src/rangeArgs.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/rangeArgs.js~rangeArgs",
+    "access": "public",
+    "export": true,
+    "importPath": "@iterable-iterator/range/src/rangeArgs.js",
+    "importStyle": "rangeArgs",
+    "description": "Resolve arguments for {@link range} and {@link rangeIterator}.",
+    "lineNumber": 9,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{[number, number, number]}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "start",
+        "description": "The starting value."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "stop",
+        "description": "The stopping value."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "1",
+        "defaultRaw": 1,
+        "name": "step",
+        "description": "The step value."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "[number, number, number]"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "name": "src/rangeIterator.js",
+    "content": "import rangeArgs from './rangeArgs.js';\nimport forwardRangeIterator from './forwardRangeIterator.js';\nimport backwardRangeIterator from './backwardRangeIterator.js';\n\n/**\n * Yields values in a range, separated by a fixed constant called step. If this\n * step is negative, the range has to be given in reverse order, that is,\n * largest value first, smallest value second. Both the starting value and the\n * step value are optional. By default the starting value is <code>0</code>.\n * The default for the step value is <code>1</code>.\n *\n * @param {number} [start=0] - The starting value.\n * @param {number} stop - The stopping value.\n * @param {number} [step=1] - The step value.\n * @returns {IterableIterator<number>}\n */\nconst rangeIterator = (start, stop, step) => {\n\t[start, stop, step] = rangeArgs(start, stop, step);\n\treturn step < 0\n\t\t? backwardRangeIterator(start, stop, step)\n\t\t: forwardRangeIterator(start, stop, step);\n};\n\nexport default rangeIterator;\n",
+    "static": true,
+    "longname": "/home/runner/work/range/range/src/rangeIterator.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 77,
+    "kind": "function",
+    "name": "rangeIterator",
+    "memberof": "src/rangeIterator.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/rangeIterator.js~rangeIterator",
+    "access": "public",
+    "export": true,
+    "importPath": "@iterable-iterator/range/src/rangeIterator.js",
+    "importStyle": "rangeIterator",
+    "description": "Yields values in a range, separated by a fixed constant called step. If this\nstep is negative, the range has to be given in reverse order, that is,\nlargest value first, smallest value second. Both the starting value and the\nstep value are optional. By default the starting value is <code>0</code>.\nThe default for the step value is <code>1</code>.",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{IterableIterator<number>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "start",
+        "description": "The starting value."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "stop",
+        "description": "The stopping value."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "1",
+        "defaultRaw": 1,
+        "name": "step",
+        "description": "The step value."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "IterableIterator<number>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
     "kind": "index",
-    "content": ":mountain: [@iterable-iterator/range](https://iterable-iterator.github.io/range)\n==\n\nA range function for JavaScript.\nSee [docs](https://iterable-iterator.github.io/range/index.html).\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\n```js\nimport {range} from '@iterable-iterator/range';\nrange( 3 ) ; // 0 1 2\nrange( 2 , 5 ) ; // 2 3 4\nrange( 5 , 2 , -1 ) ; // 5 4 3\n\nrange(Number.MAX_SAFE_INTEGER).has(1234); // true\nrange(0, 10, 2).get(3); // 6\n\n// If you only use the iterator feature you can save bytes by calling the\n// IterableIterator function directly\nimport {forwardRangeIterator, backwardRangeIterator} from '@iterable-iterator/range';\n\nfor (const x of forwardRangeIterator(0, 10, 1)) ...\nfor (const x of backwardRangeIterator(10, 0, -1)) ...\n// caveat: This requires you to specify all parameters, and choose the correct\n// implementation depending on the sign of the `step` parameter.\n\n// For convenience\nimport {forwardRangeIterator as range} from '@iterable-iterator/range';\n```\n\n[![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)\n[![Tests](https://img.shields.io/github/workflow/status/iterable-iterator/range/ci:test?event=push&label=tests)](https://github.com/iterable-iterator/range/actions/workflows/ci:test.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/david/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range)\n[![Dev dependencies](https://img.shields.io/david/dev/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/iterable-iterator/range.svg)](https://github.com/iterable-iterator/range/issues)\n[![Downloads](https://img.shields.io/npm/dm/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/iterable-iterator/range/main.svg)](https://codecov.io/gh/iterable-iterator/range)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/trends/technical_debt)\n[![Documentation](https://iterable-iterator.github.io/range/badge.svg)](https://iterable-iterator.github.io/range/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@iterable-iterator/range)](https://bundlephobia.com/result?p=@iterable-iterator/range)\n",
+    "content": ":mountain: [@iterable-iterator/range](https://iterable-iterator.github.io/range)\n==\n\nA range function for JavaScript.\nSee [docs](https://iterable-iterator.github.io/range/index.html).\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\n```js\nimport {range} from '@iterable-iterator/range';\nrange( 3 ) ; // 0 1 2\nrange( 2 , 5 ) ; // 2 3 4\nrange( 5 , 2 , -1 ) ; // 5 4 3\n\nrange(Number.MAX_SAFE_INTEGER).has(1234); // true\nrange(0, 10, 2).get(3); // 6\n\n// If you only use the iterator feature you can save bytes by calling the\n// IterableIterator function directly\nimport {forwardRangeIterator, backwardRangeIterator} from '@iterable-iterator/range';\n\nfor (const x of forwardRangeIterator(0, 10, 1)) ...\nfor (const x of backwardRangeIterator(10, 0, -1)) ...\n// caveat: This requires you to specify all parameters, and choose the correct\n// implementation depending on the sign of the `step` parameter.\n\n// For convenience, rangeIterator will return the correct kind of\n// IterableIterator without constructing a Range object. It has the same signature\n// as the range function.\nimport {rangeIterator as range} from '@iterable-iterator/range';\n```\n\n[![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)\n[![Tests](https://img.shields.io/github/workflow/status/iterable-iterator/range/ci:test?event=push&label=tests)](https://github.com/iterable-iterator/range/actions/workflows/ci:test.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/david/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range)\n[![Dev dependencies](https://img.shields.io/david/dev/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/iterable-iterator/range.svg)](https://github.com/iterable-iterator/range/issues)\n[![Downloads](https://img.shields.io/npm/dm/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/iterable-iterator/range/main.svg)](https://codecov.io/gh/iterable-iterator/range)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/iterable-iterator/range.svg)](https://codeclimate.com/github/iterable-iterator/range/trends/technical_debt)\n[![Documentation](https://iterable-iterator.github.io/range/badge.svg)](https://iterable-iterator.github.io/range/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@iterable-iterator/range)](https://bundlephobia.com/result?p=@iterable-iterator/range)\n",
     "longname": "/home/runner/work/range/range/README.md",
     "name": "./README.md",
     "static": true,
@@ -1309,7 +1463,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@iterable-iterator/range\",\n  \"description\": \"A range function for JavaScript\",\n  \"version\": \"2.0.1\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"make-github-pseudonymous-again\",\n  \"homepage\": \"https://iterable-iterator.github.io/range\",\n  \"repository\": {\n    \"url\": \"https://github.com/iterable-iterator/range\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/iterable-iterator/range/issues\"\n  },\n  \"keywords\": [\n    \"iter\",\n    \"iterable\",\n    \"iterator\",\n    \"range\"\n  ],\n  \"sideEffects\": false,\n  \"type\": \"module\",\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.cjs\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.cjs\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:build\": \"npm run build\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/core\": \"7.14.6\",\n    \"@babel/preset-env\": \"7.14.7\",\n    \"@babel/register\": \"7.14.5\",\n    \"@commitlint/cli\": \"12.1.4\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.1.0\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.3\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"1.0.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"7.0.1\",\n    \"lint-staged\": \"11.0.1\",\n    \"microbundle\": \"0.13.1\",\n    \"np\": \"7.5.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.39.1\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": [\n        \"error\",\n        {\n          \"cases\": {\n            \"camelCase\": true,\n            \"pascalCase\": true\n          }\n        }\n      ]\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@iterable-iterator/range\",\n  \"description\": \"A range function for JavaScript\",\n  \"version\": \"2.1.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"make-github-pseudonymous-again\",\n  \"homepage\": \"https://iterable-iterator.github.io/range\",\n  \"repository\": {\n    \"url\": \"https://github.com/iterable-iterator/range\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/iterable-iterator/range/issues\"\n  },\n  \"keywords\": [\n    \"iter\",\n    \"iterable\",\n    \"iterator\",\n    \"range\"\n  ],\n  \"sideEffects\": false,\n  \"type\": \"module\",\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.cjs\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.cjs\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:build\": \"npm run build\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/core\": \"7.14.8\",\n    \"@babel/preset-env\": \"7.14.9\",\n    \"@babel/register\": \"7.14.5\",\n    \"@commitlint/cli\": \"13.1.0\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.1.0\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.8.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"1.0.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"7.0.1\",\n    \"lint-staged\": \"11.1.1\",\n    \"microbundle\": \"0.13.1\",\n    \"np\": \"7.5.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.9\",\n    \"xo\": \"0.39.1\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": [\n        \"error\",\n        {\n          \"cases\": {\n            \"camelCase\": true,\n            \"pascalCase\": true\n          }\n        }\n      ]\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
     "longname": "/home/runner/work/range/range/package.json",
     "name": "package.json",
     "static": true,

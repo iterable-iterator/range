@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "@iterable-iterator/range/src/backwardrange.js~backwardrange",
+    "class/src/BackwardRange.js~BackwardRange.html",
+    "<span>BackwardRange</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/BackwardRange.js</span>",
+    "class"
+  ],
+  [
     "@iterable-iterator/range/src/forwardrange.js~forwardrange",
     "class/src/ForwardRange.js~ForwardRange.html",
     "<span>ForwardRange</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/ForwardRange.js</span>",
@@ -9,12 +15,6 @@ window.esdocSearchIndex = [
     "@iterable-iterator/range/src/range.js~range",
     "class/src/Range.js~Range.html",
     "<span>Range</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/Range.js</span>",
-    "class"
-  ],
-  [
-    "@iterable-iterator/range/src/backwardrange.js~reverserange",
-    "class/src/BackwardRange.js~ReverseRange.html",
-    "<span>ReverseRange</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/BackwardRange.js</span>",
     "class"
   ],
   [
@@ -33,6 +33,18 @@ window.esdocSearchIndex = [
     "@iterable-iterator/range/src/range.js~range",
     "function/index.html#static-function-range",
     "<span>range</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/range.js</span>",
+    "function"
+  ],
+  [
+    "@iterable-iterator/range/src/rangeargs.js~rangeargs",
+    "function/index.html#static-function-rangeArgs",
+    "<span>rangeArgs</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/rangeArgs.js</span>",
+    "function"
+  ],
+  [
+    "@iterable-iterator/range/src/rangeiterator.js~rangeiterator",
+    "function/index.html#static-function-rangeIterator",
+    "<span>rangeIterator</span> <span class=\"search-result-import-path\">@iterable-iterator/range/src/rangeIterator.js</span>",
     "function"
   ],
   [
@@ -324,21 +336,21 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/backwardrange.js~reverserange#[symbol.iterator]",
-    "class/src/BackwardRange.js~ReverseRange.html#instance-method-[Symbol.iterator]",
-    "src/BackwardRange.js~ReverseRange#[Symbol.iterator]",
+    "src/backwardrange.js~backwardrange#[symbol.iterator]",
+    "class/src/BackwardRange.js~BackwardRange.html#instance-method-[Symbol.iterator]",
+    "src/BackwardRange.js~BackwardRange#[Symbol.iterator]",
     "method"
   ],
   [
-    "src/backwardrange.js~reverserange#constructor",
-    "class/src/BackwardRange.js~ReverseRange.html#instance-constructor-constructor",
-    "src/BackwardRange.js~ReverseRange#constructor",
+    "src/backwardrange.js~backwardrange#constructor",
+    "class/src/BackwardRange.js~BackwardRange.html#instance-constructor-constructor",
+    "src/BackwardRange.js~BackwardRange#constructor",
     "method"
   ],
   [
-    "src/backwardrange.js~reverserange#has",
-    "class/src/BackwardRange.js~ReverseRange.html#instance-method-has",
-    "src/BackwardRange.js~ReverseRange#has",
+    "src/backwardrange.js~backwardrange#has",
+    "class/src/BackwardRange.js~BackwardRange.html#instance-method-has",
+    "src/BackwardRange.js~BackwardRange#has",
     "method"
   ],
   [
@@ -435,6 +447,18 @@ window.esdocSearchIndex = [
     "src/range.js",
     "file/src/range.js.html",
     "src/range.js",
+    "file"
+  ],
+  [
+    "src/rangeargs.js",
+    "file/src/rangeArgs.js.html",
+    "src/rangeArgs.js",
+    "file"
+  ],
+  [
+    "src/rangeiterator.js",
+    "file/src/rangeIterator.js.html",
+    "src/rangeIterator.js",
     "file"
   ]
 ]

@@ -29,12 +29,14 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BackwardRange.js~ReverseRange.html">ReverseRange</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BackwardRange.js~BackwardRange.html">BackwardRange</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ForwardRange.js~ForwardRange.html">ForwardRange</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Range.js~Range.html">Range</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-backwardRangeIterator">backwardRangeIterator</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-forwardRangeIterator">forwardRangeIterator</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-range">range</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rangeArgs">rangeArgs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rangeIterator">rangeIterator</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -63,8 +65,10 @@ for (const x of backwardRangeIterator(10, 0, -1)) ...
 // caveat: This requires you to specify all parameters, and choose the correct
 // implementation depending on the sign of the `step` parameter.
 
-// For convenience
-import {forwardRangeIterator as range} from &apos;@iterable-iterator/range&apos;;</code>
+// For convenience, rangeIterator will return the correct kind of
+// IterableIterator without constructing a Range object. It has the same signature
+// as the range function.
+import {rangeIterator as range} from &apos;@iterable-iterator/range&apos;;</code>
 </code></pre>
 <p><a href="https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE"><img src="https://img.shields.io/github/license/iterable-iterator/range.svg" alt="License"></a>
 <a href="https://www.npmjs.org/package/@iterable-iterator/range"><img src="https://img.shields.io/npm/v/@iterable-iterator/range.svg" alt="Version"></a>
