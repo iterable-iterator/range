@@ -2,7 +2,7 @@ import assert from 'assert';
 import Range from './Range.js';
 import backwardRangeIterator from './backwardRangeIterator.js';
 
-export default class ReverseRange extends Range {
+export default class BackwardRange extends Range {
 	/**
 	 * Constructor.
 	 *
