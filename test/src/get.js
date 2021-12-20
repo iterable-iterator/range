@@ -25,11 +25,11 @@ test(get, range(10, 0, -3), 1, 7);
 test(throws, range(0), 0);
 test(throws, range(10), -1);
 test(throws, range(10), 10);
-test(throws, range(10), -11738927);
-test(throws, range(10), 10123701);
+test(throws, range(10), -11_738_927);
+test(throws, range(10), 10_123_701);
 
-test(throws, range(-12890981238, 81979238179), null);
-test(throws, range(-12890981238, 81979238179), 0.5);
+test(throws, range(-12_890_981_238, 81_979_238_179), null);
+test(throws, range(-12_890_981_238, 81_979_238_179), 0.5);
 
 test(get, range(0, 1, 2), 0, 0);
 test(throws, range(0, 1, 2), 1);
