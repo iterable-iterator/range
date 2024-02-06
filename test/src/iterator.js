@@ -2,14 +2,17 @@ import test from 'ava';
 
 import {range as rangeObject, rangeIterator} from '#module';
 
-const macro = (t, range, items, expected) => {
+const macro = (t, {range}, items, expected) => {
 	t.deepEqual(Array.from(range(...items)), expected);
 };
 
-macro.title = (title, range, items, expected) =>
-	title ?? `list(${range.name}(${items})) = ${JSON.stringify(expected)}`;
+macro.title = (title, {name}, items, expected) =>
+	title ?? `list(${name}(${items})) = ${JSON.stringify(expected)}`;
 
-for (const range of [rangeObject, rangeIterator]) {
+for (const range of [
+	{name: 'range', range: rangeObject},
+	{name: 'rangeIterator', range: rangeIterator},
+]) {
 	test(macro, range, [3], [0, 1, 2]);
 	test(macro, range, [3, 6], [3, 4, 5]);
 

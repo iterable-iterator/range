@@ -1,4 +1,5 @@
 import assert from 'assert';
+
 import Range from './Range.js';
 import forwardRangeIterator from './forwardRangeIterator.js';
 
