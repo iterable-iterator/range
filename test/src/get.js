@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import {range} from '../../src/index.js';
+import {range} from '#module';
 
 const get = (t, items, key, value) => {
 	t.is(items.get(key), value);

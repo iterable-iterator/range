@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import {range} from '../../src/index.js';
+import {range} from '#module';
 
 const macro = (t, args, expected) => {
 	t.deepEqual(range(...args), expected);

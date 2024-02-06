@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import {range as rangeObject, rangeIterator} from '../../src/index.js';
+import {range as rangeObject, rangeIterator} from '#module';
 
 const macro = (t, range, items, expected) => {
 	t.deepEqual(Array.from(range(...items)), expected);
