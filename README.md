@@ -35,8 +35,7 @@ import {rangeIterator as range} from '@iterable-iterator/range';
 [![License](https://img.shields.io/github/license/iterable-iterator/range.svg)](https://raw.githubusercontent.com/iterable-iterator/range/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)
 [![Tests](https://img.shields.io/github/workflow/status/iterable-iterator/range/ci:test?event=push&label=tests)](https://github.com/iterable-iterator/range/actions/workflows/ci:test.yml?query=branch:main)
-[![Dependencies](https://img.shields.io/david/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range)
-[![Dev dependencies](https://img.shields.io/david/dev/iterable-iterator/range.svg)](https://david-dm.org/iterable-iterator/range?type=dev)
+[![Dependencies](https://img.shields.io/librariesio/github/iterable-iterator/range.svg)](https://github.com/iterable-iterator/range/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/iterable-iterator/range.svg)](https://github.com/iterable-iterator/range/issues)
 [![Downloads](https://img.shields.io/npm/dm/@iterable-iterator/range.svg)](https://www.npmjs.org/package/@iterable-iterator/range)
 
